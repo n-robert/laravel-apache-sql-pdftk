@@ -1,4 +1,5 @@
 FROM php:7.4.1-apache
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # 1. development packages
 RUN apt-get update \
