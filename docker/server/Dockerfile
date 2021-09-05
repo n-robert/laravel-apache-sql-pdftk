@@ -34,6 +34,6 @@ RUN chmod uga+x /usr/local/bin/install-php-extensions && sync \
         bcmath
 
 # 5. pdftk
-RUN mkdir /usr/share/man/man1/ \
+RUN mkdir -p /usr/share/man/man1/ \
  && apt-get update \
  && apt-get install -y pdftk
