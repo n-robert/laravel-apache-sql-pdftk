@@ -7,7 +7,7 @@ services:
       context: docker/server
     image: apache  
     ports:
-      - 8001:80
+      - "8001:80"
     volumes:
       - ./:/var/www/html
       - ./storage/app/public/:/var/www/public/storage/
@@ -19,7 +19,7 @@ services:
     build: ./docker/pgsql
     image: pgsql
     ports:
-      - 5433:5432
+      - "5434:5432"
     volumes:
       - ./docker/pgsql/init:/docker-entrypoint-initdb.d
       - ./docker/pgsql/pgdata:/var/lib/postgresql
@@ -35,7 +35,7 @@ services:
     #build: ./docker/mysql
     #image: mysql
     #ports:
-      #- 3307:3306
+      #- "3308:3306"
     #volumes:
       #- ./docker/mysql/init:/docker-entrypoint-initdb.d
       #- ./docker/mysql/mydata:/var/lib/mysql
